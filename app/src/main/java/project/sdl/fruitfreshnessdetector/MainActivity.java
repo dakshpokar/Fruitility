@@ -14,32 +14,24 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    static final int REQUEST_IMAGE_CAPTURE = 1;
-    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        imageView = (ImageView)findViewById(R.id.image);
+
     }
-    public void banana(View view){
-        Toast.makeText(this, "Banana Detection", Toast.LENGTH_SHORT).show();
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+    public void FruitOnClick(View view){
+        switch(view.getId()){
+            case R.id.banana:
+                Toast.makeText(this, "Banana", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.apple:
+                Toast.makeText(this, "Apple", Toast.LENGTH_SHORT).show();
+                break;
         }
-    }
-    public void apple(View view){
-        Toast.makeText(this, "Apple Detection", Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
-            imageView.setImageBitmap(imageBitmap);
-        }
+        Intent intent = new Intent(MainActivity.this, Selector.class);
+        startActivity(intent);
     }
 }
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".Selector">
+<Button
+    android:id="@+id/gallery_select"
+    android:layout_width="match_parent"
+    android:layout_centerVertical="true"
+    android:text="Select photo from gallery"
+    android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/camera_select"
+        android:layout_below="@+id/gallery_select"
+        android:layout_width="match_parent"
+        android:text="Take a photo using camera"
+        android:layout_centerVertical="true"
+        android:onClick="usingCamera"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

@@ -18,7 +18,8 @@
     android:layout_height="150dp"
     android:padding="5dp"
     app:cardCornerRadius="5dp"
-    android:onClick="banana"
+    android:onClick="FruitOnClick"
+    android:id="@+id/banana"
     android:elevation="10dp"
     >
     <ImageView
@@ -33,8 +34,9 @@
         android:layout_weight="1"
         app:cardCornerRadius="5dp"
         android:layout_margin="10dp"
+        android:id="@+id/apple"
         android:layout_height="150dp"
-        android:onClick="apple"
+        android:onClick="FruitOnClick"
         android:padding="5dp"
         android:elevation="10dp"
         >
