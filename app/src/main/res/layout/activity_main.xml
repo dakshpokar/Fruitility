@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#efefef"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:id="@+id/main_tiles"
+    android:layout_height="wrap_content">
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_weight="1"
+    android:layout_margin="10dp"
+    android:layout_height="150dp"
+    android:padding="5dp"
+    app:cardCornerRadius="5dp"
+    android:onClick="banana"
+    android:elevation="10dp"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:scaleType="centerInside"
+        android:layout_height="match_parent"
+        android:src="@drawable/banana"/>
+</android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="10dp"
+        android:layout_height="150dp"
+        android:onClick="apple"
+        android:padding="5dp"
+        android:elevation="10dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:scaleType="centerInside"
+            android:layout_height="match_parent"
+            android:src="@drawable/apple"/>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/image"
+        android:layout_height="400dp"
+        android:layout_below="@+id/main_tiles"
+        />
+</RelativeLayout>
